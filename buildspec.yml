@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
             - echo Logging in to Amazon ECR...
-            - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+            - $(aws ecr get-login --region ap-southeast-1 --no-include-email)
             - REPOSITORY_URI=038540414823.dkr.ecr.ap-southeast-1.amazonaws.com/test-temp-app 
             - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
             - IMAGE_TAG=${COMMIT_HASH:=latest}
