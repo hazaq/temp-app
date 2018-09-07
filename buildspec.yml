@@ -6,7 +6,7 @@ phases:
             - echo Logging in to Amazon ECR...
             - aws --version
             - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-            - REPOSITORY_URI=665587569637.dkr.ecr.eu-west-1.amazonaws.com/htapp-main
+            - REPOSITORY_URI=665587569637.dkr.ecr.ap-southeast-1.amazonaws.com/htapp-main
             - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
             - echo $AWS_DEFAULT_REGION
             - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
